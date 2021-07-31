@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  php-apache-env:
+    container_name: php-apache
+    image: php:latest
+    volumes:
+     # you can change the default path from contianer as well
+     - ./php/src:/var/www/html
+    ports:
+     # you can leave 80:80 for default ports
+     - 8000:80
